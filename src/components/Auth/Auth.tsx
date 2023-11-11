@@ -47,13 +47,15 @@ export function Auth(){
 
 
     return(
-        <Box>
+        <Box sx={{
+            height:'100vh',
+        }}>
             <Box sx={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: 'column',
-
+                height:'100%',
             }}>
                 <Typography variant='h5'>Авторизация</Typography>
                 <Grid container direction="column" alignItems="center">
