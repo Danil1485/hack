@@ -5,11 +5,11 @@ import {Test} from "../Api/Api";
 import {Box, Button, Grid, TextField, Typography} from "@mui/material";
 
 interface Data {
-    username: string,
+    email: string,
     password: string,
 }
 export function Auth(){
-    const [data, setData] = useState<Data>({username: "", password: ""});
+    const [data, setData] = useState<Data>({email: "", password: ""});
 
     const handleButtonClick = () => {
         const token = localStorage.getItem('token')
@@ -57,7 +57,7 @@ export function Auth(){
             }}>
                 <Typography variant='h5'>Авторизация</Typography>
                 <Grid container direction="column" alignItems="center">
-                    <TextField id="standard-basic" label="Логин" variant="standard" value={data.username} name="username" className='placeholder' type="text" onChange={handleChange}/>
+                    <TextField id="standard-basic" label="Логин" variant="standard" value={data.email} name="username" className='placeholder' type="text" onChange={handleChange}/>
                     <TextField id="standard-basic" label="Пароль" variant="standard" value={data.password} name="password" className='placeholder' type="password" onChange={handleChange}/>
                 </Grid>
 
